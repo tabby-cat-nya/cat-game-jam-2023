@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqyfuov3ku0j8"]
+
+[ext_resource type="Script" path="res://scripts/module.gd" id="1_kdod6"]
+[ext_resource type="TileSet" uid="uid://bi2gbtu8fw1ts" path="res://dcssfTILEMAP.tres" id="2_bx4e5"]
+
+[node name="module" type="Node2D"]
+script = ExtResource("1_kdod6")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_bx4e5")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1376256, 7, 1, 1376256, 7, 2, 1376256, 7, 3, 1376256, 7, 4, 1376256, 7, 5, 1376256, 7, 7, 1376256, 7, 8, 1376256, 7, 9, 1376256, 7, 10, 1376256, 7, 11, 1376256, 7, 65541, 1376256, 7, 65542, 1376256, 7, 65543, 1376256, 7)
+
+[node name="connector" type="Node2D" parent="."]
+position = Vector2(384, 0)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="connector"]
+
+[connection signal="screen_entered" from="connector/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
