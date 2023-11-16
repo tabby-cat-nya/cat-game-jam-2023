@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cpseoiomidkuy"]
+[gd_scene load_steps=27 format=3 uid="uid://cpseoiomidkuy"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_j0bux"]
 [ext_resource type="Texture2D" uid="uid://ba2m3q0p3ff50" path="res://Neko.png" id="1_op7o3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/wallOfDeath.gd" id="4_g8ndm"]
 [ext_resource type="Script" path="res://scripts/platform.gd" id="5_fvgk3"]
 [ext_resource type="Texture2D" uid="uid://cldd5hw2xaxkn" path="res://fpsTest/icon.svg" id="5_g8jgm"]
+[ext_resource type="Script" path="res://scripts/debugMouseTool.gd" id="7_8h4yu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsi8o"]
 atlas = ExtResource("1_op7o3")
@@ -18198,6 +18199,18 @@ _data = {
 }
 point_count = 7
 
+[sub_resource type="Gradient" id="Gradient_04wav"]
+offsets = PackedFloat32Array(0, 0.503226, 1)
+colors = PackedColorArray(0.776471, 0, 1, 1, 1, 0.560784, 0.176471, 1, 0.34902, 0.560784, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_l4y72"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xm12e"]
+width = 10
+height = 10
+color_ramp = SubResource("Gradient_04wav")
+noise = SubResource("FastNoiseLite_l4y72")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_644fp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ohelh"]
@@ -18243,24 +18256,29 @@ curve = SubResource("Curve2D_dgx0i")
 [node name="Line2D" type="Line2D" parent="Path2D"]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+visible = false
 rotation = -1.58289
 loop = false
 
-[node name="platform" type="StaticBody2D" parent="Path2D/PathFollow2D"]
-rotation = 0.0520323
+[node name="Sprite2D" type="Sprite2D" parent="Path2D"]
+texture = SubResource("NoiseTexture2D_xm12e")
+script = ExtResource("7_8h4yu")
+
+[node name="platform" type="StaticBody2D" parent="Path2D"]
+rotation = -1.53086
 script = ExtResource("5_fvgk3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/platform"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/platform"]
 scale = Vector2(3.005, 3.005)
 shape = SubResource("RectangleShape2D_644fp")
 
-[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/platform/CollisionShape2D"]
+[node name="Area2D" type="Area2D" parent="Path2D/platform/CollisionShape2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/platform/CollisionShape2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/platform/CollisionShape2D/Area2D"]
 scale = Vector2(3.045, 3.045)
 shape = SubResource("CircleShape2D_ohelh")
 
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/platform/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/platform/CollisionShape2D"]
 scale = Vector2(0.155, 0.155)
 texture = ExtResource("5_g8jgm")
 
@@ -18268,5 +18286,5 @@ texture = ExtResource("5_g8jgm")
 visible = false
 position = Vector2(217, -145)
 
-[connection signal="mouse_entered" from="Path2D/PathFollow2D/platform/CollisionShape2D/Area2D" to="Path2D/PathFollow2D/platform" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Path2D/PathFollow2D/platform/CollisionShape2D/Area2D" to="Path2D/PathFollow2D/platform" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Path2D/platform/CollisionShape2D/Area2D" to="Path2D/platform" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Path2D/platform/CollisionShape2D/Area2D" to="Path2D/platform" method="_on_area_2d_mouse_exited"]

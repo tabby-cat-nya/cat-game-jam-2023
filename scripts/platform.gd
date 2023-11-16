@@ -2,9 +2,9 @@ extends StaticBody2D
 
 var hasMouse : bool = false
 var isDragging : bool = false
-@onready var path := $"../.."
+@onready var path := $".."
 var curve : Curve2D
-@onready var line := $"../../Line2D"
+@onready var line := $"../Line2D"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,8 +27,8 @@ func _process(delta):
 		isDragging = false
 	
 	if(isDragging):
-		global_position = curve.get_closest_point(get_global_mouse_position()) #more working than the below
-		#global_position = curve.get_closest_point(get_global_mouse_position()+ Vector2(217, -145)) 
+		#global_position = curve.get_closest_point(get_global_mouse_position()) #more working than the below
+		global_position = curve.get_closest_point(get_global_mouse_position() - path.global_position) + path.global_position
 		
 
 func _on_area_2d_mouse_entered():
