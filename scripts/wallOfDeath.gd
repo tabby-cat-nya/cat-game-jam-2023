@@ -2,10 +2,14 @@ extends Sprite2D
 
 @export var Speed : float
 var currentSpeed : float
+@onready var notifier := $VisibleOnScreenNotifier2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	currentSpeed = Speed
+	if(notifier.is_on_screen()):
+		currentSpeed = Speed
+	else:
+		currentSpeed = 2*Speed
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

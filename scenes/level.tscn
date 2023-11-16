@@ -18187,7 +18187,7 @@ background_mode = 1
 background_color = Color(0, 0.890196, 0.901961, 1)
 
 [sub_resource type="Gradient" id="Gradient_i8fno"]
-colors = PackedColorArray(1, 0, 0, 1, 1, 0.639216, 0, 1)
+colors = PackedColorArray(0, 0.559231, 0.885631, 1, 0, 0.954581, 0.945754, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_fk128"]
 gradient = SubResource("Gradient_i8fno")
@@ -18255,8 +18255,10 @@ environment = SubResource("Environment_62cdb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
+position_smoothing_speed = 2.0
 
 [node name="killWall" type="Sprite2D" parent="."]
+z_index = 3
 position = Vector2(-599, 1079)
 scale = Vector2(8.39063, 56.625)
 texture = SubResource("GradientTexture2D_fk128")
@@ -18264,6 +18266,7 @@ script = ExtResource("4_g8ndm")
 Speed = 120.0
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="killWall"]
+rect = Rect2(-11.62, -32.02, 32.32, 64.13)
 
 [node name="block on rail" parent="." instance=ExtResource("5_7q2yg")]
 position = Vector2(133, -164)
@@ -18304,7 +18307,7 @@ script = ExtResource("7_8h4yu")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(1.975, 1.975)
+motion_scale = Vector2(0.9, 0.9)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 z_index = -7
