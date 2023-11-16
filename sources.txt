@@ -1,0 +1,5 @@
+Cat Sprite:
+	https://opengameart.org/content/neko-cat-fighter-animated-jason-em-style
+
+Level Sprite:
+	Dungeon Crawl Stone Soup Full

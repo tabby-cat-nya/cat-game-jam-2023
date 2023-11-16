@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=2 format=3 uid="uid://bpp8h0p23no3r"]
+
+[ext_resource type="Texture2D" uid="uid://b4psshdwkyay3" path="res://fpsTest/rect_gray_0_old.png" id="1_473l7"]
+
+[resource]
+diffuse_texture = ExtResource("1_473l7")
+specular_color = Color(0.388235, 0.537255, 0.494118, 1)
+texture_filter = 1

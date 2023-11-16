@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cd0fjcwb8xlbb"]
+
+[ext_resource type="Texture2D" uid="uid://b4psshdwkyay3" path="res://fpsTest/rect_gray_0_old.png" id="1_2hvje"]
+
+[resource]
+albedo_texture = ExtResource("1_2hvje")
+uv1_scale = Vector3(20, 20, 20)
+texture_filter = 0
