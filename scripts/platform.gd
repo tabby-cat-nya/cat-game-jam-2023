@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends RigidBody2D
 
 var hasMouse : bool = false
 var isDragging : bool = false

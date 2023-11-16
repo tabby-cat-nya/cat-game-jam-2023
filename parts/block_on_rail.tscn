@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5s1ovvq4ohpx"]
+
+[ext_resource type="Script" path="res://scripts/platform.gd" id="1_5f2k3"]
+[ext_resource type="Texture2D" uid="uid://cldd5hw2xaxkn" path="res://fpsTest/icon.svg" id="2_bqhjo"]
+
+[sub_resource type="Curve2D" id="Curve2D_2cn70"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 142.22)
+}
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_42qn7"]
+offsets = PackedFloat32Array(0, 0.516364, 1)
+colors = PackedColorArray(0.14902, 0.14902, 0.14902, 1, 0.504132, 0.504132, 0.504132, 1, 0.14902, 0.14902, 0.14902, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_644fp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohelh"]
+
+[node name="block on rail" type="Path2D"]
+curve = SubResource("Curve2D_2cn70")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 5.0
+default_color = Color(0, 0.87451, 0.831373, 1)
+gradient = SubResource("Gradient_42qn7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+visible = false
+rotation = 1.5708
+
+[node name="platform" type="RigidBody2D" parent="."]
+freeze = true
+freeze_mode = 1
+script = ExtResource("1_5f2k3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]
+scale = Vector2(3.005, 3.005)
+shape = SubResource("RectangleShape2D_644fp")
+
+[node name="Area2D" type="Area2D" parent="platform/CollisionShape2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform/CollisionShape2D/Area2D"]
+scale = Vector2(3.045, 3.045)
+shape = SubResource("CircleShape2D_ohelh")
+
+[node name="Sprite2D" type="Sprite2D" parent="platform/CollisionShape2D"]
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("2_bqhjo")
+
+[connection signal="mouse_entered" from="platform/CollisionShape2D/Area2D" to="platform" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="platform/CollisionShape2D/Area2D" to="platform" method="_on_area_2d_mouse_exited"]
