@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cpseoiomidkuy"]
+[gd_scene load_steps=30 format=3 uid="uid://cpseoiomidkuy"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_j0bux"]
 [ext_resource type="Texture2D" uid="uid://ba2m3q0p3ff50" path="res://Neko.png" id="1_op7o3"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://scripts/wallOfDeath.gd" id="4_g8ndm"]
 [ext_resource type="PackedScene" uid="uid://c5s1ovvq4ohpx" path="res://parts/block_on_rail.tscn" id="5_7q2yg"]
 [ext_resource type="Script" path="res://scripts/debugMouseTool.gd" id="7_8h4yu"]
+[ext_resource type="Script" path="res://scripts/moduleManager.gd" id="7_pj7h2"]
+[ext_resource type="PackedScene" uid="uid://cxj4r861qyt35" path="res://parts/moduleTemplate.tscn" id="8_5hdcu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsi8o"]
 atlas = ExtResource("1_op7o3")
@@ -18187,7 +18189,8 @@ background_mode = 1
 background_color = Color(0, 0.890196, 0.901961, 1)
 
 [sub_resource type="Gradient" id="Gradient_i8fno"]
-colors = PackedColorArray(0, 0.559231, 0.885631, 1, 0, 0.954581, 0.945754, 1)
+offsets = PackedFloat32Array(0, 0.810329, 1)
+colors = PackedColorArray(0, 0.559231, 0.885631, 1, 0, 0.887508, 0.935215, 1, 0, 0.952941, 0.945098, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_fk128"]
 gradient = SubResource("Gradient_i8fno")
@@ -18239,7 +18242,7 @@ camera = NodePath("../Camera2D")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="player"]
 sprite_frames = SubResource("SpriteFrames_10y0c")
-frame_progress = 0.680981
+frame_progress = 0.0807298
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 scale = Vector2(0.795, 0.795)
@@ -18317,6 +18320,12 @@ offset_right = -1425.0
 offset_bottom = -3524.0
 scale = Vector2(20, 20)
 texture = SubResource("NoiseTexture2D_aqxod")
+
+[node name="ModuleManager" type="Node" parent="."]
+script = ExtResource("7_pj7h2")
+modules = [ExtResource("8_5hdcu")]
+
+[node name="module" parent="." instance=ExtResource("8_5hdcu")]
 
 [connection signal="screen_entered" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_exited"]

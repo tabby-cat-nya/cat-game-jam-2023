@@ -10,6 +10,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	$Sprite2D.play("default")
+	#Engine.time_scale = 2 # <--- use for speedup over time
 
 func _physics_process(delta):
 	# Add the gravity.
