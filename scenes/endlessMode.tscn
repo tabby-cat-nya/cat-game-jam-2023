@@ -193,5 +193,6 @@ Wall Speed: 130
 Modules Generated: 12"
 label_settings = SubResource("LabelSettings_xdeh7")
 
+[connection signal="moduleGenerated" from="ModuleManager" to="." method="_on_module_manager_module_generated"]
 [connection signal="screen_entered" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_exited"]

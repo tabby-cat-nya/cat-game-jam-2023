@@ -3,6 +3,9 @@ extends Node
 
 @export var modules: Array[PackedScene]
 var count : float
+signal moduleGenerated
+
+
  
 
 # Called when the node enters the scene tree for the first time.
@@ -21,7 +24,7 @@ func GenerateNextModule(spawnPos:Vector2):
 	var newModule = modules[selectedModule].instantiate()
 	newModule.position = spawnPos
 	add_child(newModule)
-	
+	moduleGenerated.emit()
 
 
 
