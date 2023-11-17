@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5s1ovvq4ohpx"]
+[gd_scene load_steps=8 format=3 uid="uid://c5s1ovvq4ohpx"]
 
 [ext_resource type="Script" path="res://scripts/platform.gd" id="1_5f2k3"]
-[ext_resource type="Texture2D" uid="uid://cldd5hw2xaxkn" path="res://fpsTest/icon.svg" id="2_bqhjo"]
+[ext_resource type="Texture2D" uid="uid://cuca7yo8x8sr" path="res://dasdsa.png" id="2_e6k4q"]
 
 [sub_resource type="Curve2D" id="Curve2D_2cn70"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 142.22)
 }
 point_count = 2
+
+[sub_resource type="Curve" id="Curve_tpb3o"]
+_data = [Vector2(0, 0.241336), 0.0, 0.0, 0, 0]
+point_count = 1
 
 [sub_resource type="Gradient" id="Gradient_42qn7"]
 offsets = PackedFloat32Array(0, 0.516364, 1)
@@ -21,7 +25,8 @@ colors = PackedColorArray(0.14902, 0.14902, 0.14902, 1, 0.504132, 0.504132, 0.50
 curve = SubResource("Curve2D_2cn70")
 
 [node name="Line2D" type="Line2D" parent="."]
-width = 5.0
+width = 2.0
+width_curve = SubResource("Curve_tpb3o")
 default_color = Color(0, 0.87451, 0.831373, 1)
 gradient = SubResource("Gradient_42qn7")
 
@@ -45,8 +50,8 @@ scale = Vector2(3.045, 3.045)
 shape = SubResource("CircleShape2D_ohelh")
 
 [node name="Sprite2D" type="Sprite2D" parent="platform/CollisionShape2D"]
-scale = Vector2(0.155, 0.155)
-texture = ExtResource("2_bqhjo")
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_e6k4q")
 
 [connection signal="mouse_entered" from="platform/CollisionShape2D/Area2D" to="platform" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="platform/CollisionShape2D/Area2D" to="platform" method="_on_area_2d_mouse_exited"]

@@ -1,16 +1,17 @@
-[gd_scene load_steps=28 format=3 uid="uid://rpjw2alhuxcg"]
+[gd_scene load_steps=29 format=3 uid="uid://rtnlglmayj8v"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dq10v"]
 [ext_resource type="Script" path="res://scripts/gameManager.gd" id="1_rgakh"]
 [ext_resource type="Texture2D" uid="uid://ba2m3q0p3ff50" path="res://Neko.png" id="2_afa5l"]
-[ext_resource type="TileSet" uid="uid://vn3yn38454i3" path="res://dcssfTILEMAP.tres" id="3_urgnr"]
+[ext_resource type="TileSet" uid="uid://bi2gbtu8fw1ts" path="res://dcssfTILEMAP.tres" id="3_urgnr"]
 [ext_resource type="Script" path="res://scripts/wallOfDeath.gd" id="4_as1ca"]
 [ext_resource type="Script" path="res://scripts/moduleManager.gd" id="7_0q47c"]
 [ext_resource type="PackedScene" uid="uid://dqyfuov3ku0j8" path="res://parts/generatorModules/test1.tscn" id="7_1cj6f"]
 [ext_resource type="PackedScene" uid="uid://cxj4r861qyt35" path="res://parts/moduleTemplate.tscn" id="8_0hbyy"]
 [ext_resource type="PackedScene" uid="uid://c1c1g5brlmyrf" path="res://parts/generatorModules/test2.tscn" id="8_nkye1"]
 [ext_resource type="PackedScene" uid="uid://chi0qap0btiei" path="res://parts/generatorModules/test3.tscn" id="9_7iwfs"]
-[ext_resource type="PackedScene" uid="uid://dqnu18j1s3t6w" path="res://parts/generatorModules/test4.tscn" id="10_nmc5i"]
+[ext_resource type="PackedScene" uid="uid://ckqdoc7ar6fus" path="res://parts/generatorModules/test4.tscn" id="10_nmc5i"]
+[ext_resource type="PackedScene" uid="uid://su0idfbl2jb7" path="res://parts/generatorModules/test5.tscn" id="11_qycva"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsi8o"]
 atlas = ExtResource("2_afa5l")
@@ -149,7 +150,7 @@ texture = SubResource("GradientTexture2D_qu7yt")
 
 [node name="ModuleManager" type="Node" parent="."]
 script = ExtResource("7_0q47c")
-modules = Array[PackedScene]([ExtResource("8_0hbyy"), ExtResource("7_1cj6f"), ExtResource("8_nkye1"), ExtResource("9_7iwfs"), ExtResource("10_nmc5i")])
+modules = Array[PackedScene]([ExtResource("8_0hbyy"), ExtResource("7_1cj6f"), ExtResource("8_nkye1"), ExtResource("9_7iwfs"), ExtResource("10_nmc5i"), ExtResource("11_qycva")])
 
 [node name="module" parent="ModuleManager" instance=ExtResource("8_0hbyy")]
 position = Vector2(-113, 290)
