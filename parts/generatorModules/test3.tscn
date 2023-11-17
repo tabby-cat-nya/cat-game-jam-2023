@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chi0qap0btiei"]
 
 [ext_resource type="Script" path="res://scripts/module.gd" id="1_alkwy"]
-[ext_resource type="TileSet" uid="uid://bi2gbtu8fw1ts" path="res://dcssfTILEMAP.tres" id="2_wwu34"]
+[ext_resource type="TileSet" uid="uid://vn3yn38454i3" path="res://dcssfTILEMAP.tres" id="2_wwu34"]
 
 [node name="module" type="Node2D"]
 script = ExtResource("1_alkwy")

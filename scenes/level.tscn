@@ -18236,8 +18236,6 @@ noise = SubResource("FastNoiseLite_fp3m3")
 position = Vector2(-16, -16)
 scale = Vector2(2, 2)
 script = ExtResource("1_j0bux")
-speed = 150.0
-jumpVelocity = -300.0
 camera = NodePath("../Camera2D")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="player"]
@@ -18266,7 +18264,7 @@ position = Vector2(-599, 1079)
 scale = Vector2(8.39063, 56.625)
 texture = SubResource("GradientTexture2D_fk128")
 script = ExtResource("4_g8ndm")
-Speed = 120.0
+Speed = 30.0
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="killWall"]
 rect = Rect2(-11.62, -32.02, 32.32, 64.13)
@@ -18323,9 +18321,9 @@ texture = SubResource("NoiseTexture2D_aqxod")
 
 [node name="ModuleManager" type="Node" parent="."]
 script = ExtResource("7_pj7h2")
-modules = [ExtResource("8_5hdcu")]
+modules = Array[PackedScene]([ExtResource("8_5hdcu")])
 
-[node name="module" parent="." instance=ExtResource("8_5hdcu")]
+[node name="module" parent="ModuleManager" instance=ExtResource("8_5hdcu")]
 
 [connection signal="screen_entered" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_exited"]
