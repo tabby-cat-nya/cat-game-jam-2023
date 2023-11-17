@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://chi0qap0btiei"]
+
+[ext_resource type="Script" path="res://scripts/module.gd" id="1_alkwy"]
+[ext_resource type="TileSet" uid="uid://bi2gbtu8fw1ts" path="res://dcssfTILEMAP.tres" id="2_wwu34"]
+
+[node name="module" type="Node2D"]
+script = ExtResource("1_alkwy")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_wwu34")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1376256, 7, 1, 1376256, 7, 2, 1376256, 7, 3, 1376256, 7, 4, 1376256, 7, 8, 1376256, 7, 9, 1376256, 7, 10, 1376256, 7, 11, 1376256, 7, 65540, 1376256, 7, 131076, 1376256, 7, 6, 1376256, 7, 7, 1376256, 7, 65542, 1376256, 7, 131078, 1376256, 7, 196612, 1376256, 7, 262148, 1376256, 7, 262149, 1376256, 7, 262150, 1376256, 7, 262151, 1376256, 7, 262152, 1376256, 7, 196616, 1376256, 7, 196617, 1376256, 7, 196618, 1376256, 7, 196619, 1376256, 7, -196597, 1376256, 7, -196598, 1376256, 7, -196599, 1376256, 7, -196600, 1376256, 7, -196601, 1376256, 7, -196602, 1376256, 7, -196603, 1376256, 7, -196604, 1376256, 7, -196605, 1376256, 7, -196606, 1376256, 7, -196607, 1376256, 7, -65528, 1376256, 7, -131062, 1376256, 7, -196608, 1376256, 7)
+
+[node name="connector" type="Node2D" parent="."]
+position = Vector2(384, 96)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="connector"]
+
+[connection signal="screen_entered" from="connector/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
