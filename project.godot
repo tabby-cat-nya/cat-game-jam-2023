@@ -17,7 +17,7 @@ config/icon="res://fpsTest/icon.svg"
 
 [autoload]
 
-GlobalManager="res://scripts/globalManager.gd"
+GlobalManager="*res://scripts/globalManager.gd"
 
 [dotnet]
 

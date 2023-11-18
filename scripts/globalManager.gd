@@ -3,7 +3,7 @@ extends Node
 
 var current_scene = null
 
-var selectedTrail = null
+var selectedTrail = "White"
 
 func _ready():
 	var root = get_tree().get_root()
@@ -46,7 +46,7 @@ func _deferred_goto_scene(path):
 	var s = ResourceLoader.load(path)
 
 	# Instance the new scene.
-	current_scene = s.instance()
+	current_scene = s.instantiate()
 
 	# Add it to the active scene, as child of root.
 	get_tree().get_root().add_child(current_scene)

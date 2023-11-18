@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cqsfdjxvf1e7w"]
+[gd_scene load_steps=27 format=3 uid="uid://cqsfdjxvf1e7w"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_hakxt"]
 [ext_resource type="Texture2D" uid="uid://s4nvvqtj6b2m" path="res://flags/lb8die24.bmp" id="1_hhcvk"]
@@ -23,13 +23,16 @@
 [ext_resource type="Texture2D" uid="uid://dvxq30ivmcc3j" path="res://menuFlags/26lgfj2j.bmp" id="21_j116q"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_elcyx"]
-font_size = 116
+font_size = 81
 font_color = Color(0.607843, 0, 0.772549, 1)
 outline_size = 18
 outline_color = Color(0, 0.658824, 0.705882, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_40ph3"]
 font_size = 41
+
+[sub_resource type="LabelSettings" id="LabelSettings_ttqn7"]
+font_size = 26
 
 [sub_resource type="Gradient" id="Gradient_oufrj"]
 colors = PackedColorArray(0.423569, 0.00208685, 0.723802, 1, 1.39579e-06, 0.741734, 0.427052, 1)
@@ -45,6 +48,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_hakxt")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -58,27 +62,39 @@ offset_right = -14.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 split_offset = 155
 
 [node name="Panel" type="Panel" parent="MarginContainer/VSplitContainer"]
 layout_mode = 2
+mouse_filter = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VSplitContainer/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/Panel/VBoxContainer"]
+layout_mode = 2
 text = "Cat Dash!"
 label_settings = SubResource("LabelSettings_elcyx")
 horizontal_alignment = 1
 
+[node name="Button" type="Button" parent="MarginContainer/VSplitContainer/Panel/VBoxContainer"]
+layout_mode = 2
+text = ">>> Play <<<"
+
 [node name="Panel2" type="Panel" parent="MarginContainer/VSplitContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VSplitContainer/Panel2"]
 layout_mode = 1
@@ -87,6 +103,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VSplitContainer/Panel2/VBoxContainer"]
 layout_mode = 2
@@ -147,7 +164,8 @@ item_19/icon = ExtResource("21_j116q")
 
 [node name="Label2" type="Label" parent="MarginContainer/VSplitContainer/Panel2/VBoxContainer"]
 layout_mode = 2
-text = "Selected: Basic"
+text = "Selected: White"
+label_settings = SubResource("LabelSettings_ttqn7")
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -158,7 +176,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = SubResource("GradientTexture2D_dihiu")
 
+[connection signal="pressed" from="MarginContainer/VSplitContainer/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="item_clicked" from="MarginContainer/VSplitContainer/Panel2/VBoxContainer/ItemList" to="." method="_on_item_list_item_clicked"]
 [connection signal="item_selected" from="MarginContainer/VSplitContainer/Panel2/VBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]
