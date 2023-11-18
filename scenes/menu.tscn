@@ -1,0 +1,164 @@
+[gd_scene load_steps=26 format=3 uid="uid://cqsfdjxvf1e7w"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_hakxt"]
+[ext_resource type="Texture2D" uid="uid://s4nvvqtj6b2m" path="res://flags/lb8die24.bmp" id="1_hhcvk"]
+[ext_resource type="Texture2D" uid="uid://c0okqm6ww0udy" path="res://colorTrails/red.png" id="2_nmphj"]
+[ext_resource type="Texture2D" uid="uid://b82qxfic228m7" path="res://colorTrails/orange.png" id="3_p0xka"]
+[ext_resource type="Texture2D" uid="uid://dggm0jr76qk6f" path="res://colorTrails/yellow.png" id="4_63yje"]
+[ext_resource type="Texture2D" uid="uid://b7hvd6e46jpm" path="res://colorTrails/green.png" id="5_c0d04"]
+[ext_resource type="Texture2D" uid="uid://dv0uefdwdbw52" path="res://colorTrails/cyan.png" id="6_2qa3s"]
+[ext_resource type="Texture2D" uid="uid://dra2yls5hnyx4" path="res://colorTrails/blue.png" id="7_w0iju"]
+[ext_resource type="Texture2D" uid="uid://d27urnt6w8bwh" path="res://colorTrails/darkBlue.png" id="8_mfe1c"]
+[ext_resource type="Texture2D" uid="uid://c7vc2wxgwn1ac" path="res://colorTrails/purple.png" id="9_pjglt"]
+[ext_resource type="Texture2D" uid="uid://76id05ayvybw" path="res://colorTrails/magenta.png" id="10_6c6f4"]
+[ext_resource type="Texture2D" uid="uid://b68s65jmcji0j" path="res://colorTrails/white.png" id="11_417d4"]
+[ext_resource type="Texture2D" uid="uid://2y3vpmtiswlv" path="res://menuFlags/ocyc3k0l.bmp" id="13_sxu4l"]
+[ext_resource type="Texture2D" uid="uid://bij6mes4tyfh4" path="res://menuFlags/zgegp358.bmp" id="14_clnkb"]
+[ext_resource type="Texture2D" uid="uid://bhjvlr8stfqkp" path="res://menuFlags/yxmnp8c2.bmp" id="15_wo7iu"]
+[ext_resource type="Texture2D" uid="uid://cn2gy1j1ajrbl" path="res://menuFlags/dryafkg5.bmp" id="16_dlbm1"]
+[ext_resource type="Texture2D" uid="uid://clijqtse4b4f3" path="res://menuFlags/wqz2exob.bmp" id="17_qy8d2"]
+[ext_resource type="Texture2D" uid="uid://lejts821c12m" path="res://menuFlags/xbrw6kik.bmp" id="18_yj2bh"]
+[ext_resource type="Texture2D" uid="uid://c6xdk2x7kkrb7" path="res://menuFlags/cnv22khd.bmp" id="19_ulade"]
+[ext_resource type="Texture2D" uid="uid://b8ljgbnrccu6r" path="res://menuFlags/25ucbi6f.bmp" id="20_eaqvk"]
+[ext_resource type="Texture2D" uid="uid://dvxq30ivmcc3j" path="res://menuFlags/26lgfj2j.bmp" id="21_j116q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_elcyx"]
+font_size = 116
+font_color = Color(0.607843, 0, 0.772549, 1)
+outline_size = 18
+outline_color = Color(0, 0.658824, 0.705882, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_40ph3"]
+font_size = 41
+
+[sub_resource type="Gradient" id="Gradient_oufrj"]
+colors = PackedColorArray(0.423569, 0.00208685, 0.723802, 1, 1.39579e-06, 0.741734, 0.427052, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dihiu"]
+gradient = SubResource("Gradient_oufrj")
+fill_from = Vector2(0, 1)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hakxt")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = -14.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+split_offset = 155
+
+[node name="Panel" type="Panel" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Cat Dash!"
+label_settings = SubResource("LabelSettings_elcyx")
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VSplitContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+text = "Trails"
+label_settings = SubResource("LabelSettings_40ph3")
+horizontal_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="MarginContainer/VSplitContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+select_mode = 1
+max_text_lines = 2
+auto_height = true
+item_count = 20
+max_columns = 10
+fixed_column_width = 103
+icon_mode = 0
+fixed_icon_size = Vector2i(80, 80)
+item_0/text = "Red"
+item_0/icon = ExtResource("2_nmphj")
+item_1/text = "Orange"
+item_1/icon = ExtResource("3_p0xka")
+item_2/text = "Yellow"
+item_2/icon = ExtResource("4_63yje")
+item_3/text = "Green"
+item_3/icon = ExtResource("5_c0d04")
+item_4/text = "Cyan"
+item_4/icon = ExtResource("6_2qa3s")
+item_5/text = "Blue"
+item_5/icon = ExtResource("7_w0iju")
+item_6/text = "Dark Blue"
+item_6/icon = ExtResource("8_mfe1c")
+item_7/text = "Purple"
+item_7/icon = ExtResource("9_pjglt")
+item_8/text = "Pink"
+item_8/icon = ExtResource("10_6c6f4")
+item_9/text = "White"
+item_9/icon = ExtResource("11_417d4")
+item_10/text = "Trans"
+item_10/icon = ExtResource("1_hhcvk")
+item_11/text = "Non-Binary"
+item_11/icon = ExtResource("13_sxu4l")
+item_12/text = "Rainbow"
+item_12/icon = ExtResource("14_clnkb")
+item_13/text = "Lesbian"
+item_13/icon = ExtResource("15_wo7iu")
+item_14/text = "Gay"
+item_14/icon = ExtResource("16_dlbm1")
+item_15/text = "AroAce"
+item_15/icon = ExtResource("17_qy8d2")
+item_16/text = "Aromantic"
+item_16/icon = ExtResource("18_yj2bh")
+item_17/text = "Asexual"
+item_17/icon = ExtResource("19_ulade")
+item_18/text = "Pan"
+item_18/icon = ExtResource("20_eaqvk")
+item_19/text = "Bisexual"
+item_19/icon = ExtResource("21_j116q")
+
+[node name="Label2" type="Label" parent="MarginContainer/VSplitContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+text = "Selected: Basic"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_dihiu")
+
+[connection signal="item_clicked" from="MarginContainer/VSplitContainer/Panel2/VBoxContainer/ItemList" to="." method="_on_item_list_item_clicked"]
+[connection signal="item_selected" from="MarginContainer/VSplitContainer/Panel2/VBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]
