@@ -17,6 +17,7 @@ func _on_item_list_item_clicked(index, at_position, mouse_button_index):
 	
 	selectedText.text = "Selected Trail: " + trailsList.get_item_text(index)
 	GlobalManager.selectedTrail = trailsList.get_item_text(index)
+	GlobalManager.selectedTrailIndex = index
 
 
 func _on_item_list_item_selected(index):

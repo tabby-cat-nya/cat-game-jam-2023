@@ -4,12 +4,16 @@ extends CharacterBody2D
 @export var speed = 300.0
 @export var jumpVelocity = -200.0
 @export var camera : Camera2D
+@export var trailTextures: Array[CompressedTexture2D]
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	$Sprite2D.play("default")
+	$"../PlayerTrail".texture = trailTextures[GlobalManager.selectedTrailIndex]
+	
+	
 	#Engine.time_scale = 2 # <--- use for speedup over time
 
 func _physics_process(delta):
@@ -33,6 +37,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 	camera.position = position
+	
+	if (position.y > 10000): #TODO add actual killwalls
+		$"..".gameOver()
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

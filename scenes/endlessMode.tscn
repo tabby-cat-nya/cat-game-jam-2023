@@ -1,23 +1,42 @@
-[gd_scene load_steps=37 format=3 uid="uid://rtnlglmayj8v"]
+[gd_scene load_steps=56 format=3 uid="uid://rtnlglmayj8v"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dq10v"]
 [ext_resource type="Script" path="res://scripts/gameManager.gd" id="1_rgakh"]
+[ext_resource type="Texture2D" uid="uid://s4nvvqtj6b2m" path="res://flags/lb8die24.bmp" id="2_2sovp"]
 [ext_resource type="Texture2D" uid="uid://clijqtse4b4f3" path="res://flags/wqz2exob.bmp" id="2_48ye6"]
 [ext_resource type="Texture2D" uid="uid://ba2m3q0p3ff50" path="res://Neko.png" id="2_afa5l"]
 [ext_resource type="TileSet" uid="uid://bi2gbtu8fw1ts" path="res://dcssfTILEMAP.tres" id="3_urgnr"]
 [ext_resource type="Script" path="res://scripts/Trail.gd" id="4_a4cgh"]
 [ext_resource type="Script" path="res://scripts/wallOfDeath.gd" id="4_as1ca"]
+[ext_resource type="Texture2D" uid="uid://c0okqm6ww0udy" path="res://colorTrails/red.png" id="5_qaotk"]
+[ext_resource type="Texture2D" uid="uid://b82qxfic228m7" path="res://colorTrails/orange.png" id="6_wo42e"]
 [ext_resource type="Script" path="res://scripts/moduleManager.gd" id="7_0q47c"]
 [ext_resource type="PackedScene" uid="uid://dqyfuov3ku0j8" path="res://parts/generatorModules/test1.tscn" id="7_1cj6f"]
+[ext_resource type="Texture2D" uid="uid://dggm0jr76qk6f" path="res://colorTrails/yellow.png" id="7_ah3cg"]
 [ext_resource type="PackedScene" uid="uid://cxj4r861qyt35" path="res://parts/moduleTemplate.tscn" id="8_0hbyy"]
 [ext_resource type="PackedScene" uid="uid://c1c1g5brlmyrf" path="res://parts/generatorModules/test2.tscn" id="8_nkye1"]
+[ext_resource type="Texture2D" uid="uid://b7hvd6e46jpm" path="res://colorTrails/green.png" id="8_p47o3"]
 [ext_resource type="PackedScene" uid="uid://chi0qap0btiei" path="res://parts/generatorModules/test3.tscn" id="9_7iwfs"]
+[ext_resource type="Texture2D" uid="uid://dv0uefdwdbw52" path="res://colorTrails/cyan.png" id="9_v6y42"]
 [ext_resource type="PackedScene" uid="uid://ckqdoc7ar6fus" path="res://parts/generatorModules/test4.tscn" id="10_nmc5i"]
+[ext_resource type="Texture2D" uid="uid://dra2yls5hnyx4" path="res://colorTrails/blue.png" id="10_pxddg"]
+[ext_resource type="Texture2D" uid="uid://d27urnt6w8bwh" path="res://colorTrails/darkBlue.png" id="11_hsk1p"]
 [ext_resource type="PackedScene" uid="uid://su0idfbl2jb7" path="res://parts/generatorModules/test5.tscn" id="11_qycva"]
+[ext_resource type="Texture2D" uid="uid://c7vc2wxgwn1ac" path="res://colorTrails/purple.png" id="12_3h30a"]
+[ext_resource type="Texture2D" uid="uid://76id05ayvybw" path="res://colorTrails/magenta.png" id="13_3a5ru"]
+[ext_resource type="Texture2D" uid="uid://b68s65jmcji0j" path="res://colorTrails/white.png" id="14_46jwn"]
 [ext_resource type="PackedScene" uid="uid://clsg84mk1nb00" path="res://parts/generatorModules/test6.tscn" id="14_fft37"]
 [ext_resource type="PackedScene" uid="uid://s3qp1k1kehce" path="res://parts/generatorModules/test7.tscn" id="15_cm8wi"]
 [ext_resource type="PackedScene" uid="uid://cmj72aag1afvv" path="res://parts/generatorModules/test9.tscn" id="16_no5bs"]
+[ext_resource type="Texture2D" uid="uid://2y3vpmtiswlv" path="res://flags/nb Flip.bmp" id="16_xwq47"]
 [ext_resource type="PackedScene" uid="uid://1kh4ce4qqw4e" path="res://parts/startingModule.tscn" id="17_1c407"]
+[ext_resource type="Texture2D" uid="uid://dnhhk8o6hsjcc" path="res://flags/zgegp358.bmp" id="17_v6haq"]
+[ext_resource type="Texture2D" uid="uid://hp81k82c7yl2" path="res://flags/yxmnp8c2.bmp" id="18_gf57y"]
+[ext_resource type="Texture2D" uid="uid://braphi4ri2j6h" path="res://flags/dryafkg5.bmp" id="19_vbqyj"]
+[ext_resource type="Texture2D" uid="uid://lejts821c12m" path="res://flags/xbrw6kik.bmp" id="20_c87rm"]
+[ext_resource type="Texture2D" uid="uid://c6xdk2x7kkrb7" path="res://flags/cnv22khd.bmp" id="21_urwto"]
+[ext_resource type="Texture2D" uid="uid://b8ljgbnrccu6r" path="res://flags/25ucbi6f.bmp" id="22_1st1p"]
+[ext_resource type="Texture2D" uid="uid://dvxq30ivmcc3j" path="res://flags/26lgfj2j.bmp" id="23_56djq"]
 
 [sub_resource type="Gradient" id="Gradient_rli2b"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -133,6 +152,7 @@ script = ExtResource("1_dq10v")
 speed = 150.0
 jumpVelocity = -300.0
 camera = NodePath("../Camera2D")
+trailTextures = Array[CompressedTexture2D]([ExtResource("5_qaotk"), ExtResource("6_wo42e"), ExtResource("7_ah3cg"), ExtResource("8_p47o3"), ExtResource("9_v6y42"), ExtResource("10_pxddg"), ExtResource("11_hsk1p"), ExtResource("12_3h30a"), ExtResource("13_3a5ru"), ExtResource("14_46jwn"), ExtResource("2_2sovp"), ExtResource("16_xwq47"), ExtResource("17_v6haq"), ExtResource("18_gf57y"), ExtResource("19_vbqyj"), ExtResource("2_48ye6"), ExtResource("20_c87rm"), ExtResource("21_urwto"), ExtResource("22_1st1p"), ExtResource("23_56djq")])
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="player"]
 sprite_frames = SubResource("SpriteFrames_10y0c")
@@ -233,7 +253,7 @@ Wall Speed: 130
 Modules Generated: 12"
 label_settings = SubResource("LabelSettings_xdeh7")
 
-[node name="Button" type="Button" parent="HUD"]
+[node name="resetButton" type="Button" parent="HUD"]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -243,8 +263,18 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Reset"
 
+[node name="menuButton" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -53.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Menu"
+
 [connection signal="moduleGenerated" from="ModuleManager" to="." method="_on_module_manager_module_generated"]
 [connection signal="screen_entered" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="body_entered" from="killWall/Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="pressed" from="HUD/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HUD/resetButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HUD/menuButton" to="." method="_on_menu_button_pressed"]

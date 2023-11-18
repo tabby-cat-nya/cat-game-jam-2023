@@ -4,6 +4,7 @@ extends Node
 var current_scene = null
 
 var selectedTrail = "White"
+var selectedTrailIndex = 9
 
 func _ready():
 	var root = get_tree().get_root()
@@ -17,10 +18,13 @@ func startGame():
 	#load game scene
 	goto_scene("res://scenes/endlessMode.tscn")
 	#get pplayer trail node
+	#var trail = get_node("PlayerTrail")
 	#set node texture to selected 
+	#trail.texture = null
 	pass
 
 func startMenu():
+	goto_scene("res://scenes/menu.tscn")
 	pass
 
 

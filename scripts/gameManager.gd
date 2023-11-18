@@ -6,7 +6,7 @@ var modulesGenerated : int = 0
 @onready var storm := $killWall
 @onready var gui := $HUD/Label
 @onready var player := $player
-@onready var resetButton := $HUD/Button
+@onready var resetButton := $HUD/resetButton
 
 # old speed 130
 # max speed = player speed (150)
@@ -32,11 +32,18 @@ func _on_module_manager_module_generated():
 
 func _on_area_2d_body_entered(body): #killwall collsions
 	if(body == player): #player has been hit
-		Engine.time_scale = 0.01
-		resetButton.visible = true
+		gameOver()
 
+func gameOver():
+	Engine.time_scale = 0.01
+	resetButton.visible = true
 
 func _on_button_pressed():
 	get_tree().reload_current_scene()
 	Engine.time_scale = 1
 	
+
+
+func _on_menu_button_pressed():
+	Engine.time_scale = 1
+	GlobalManager.startMenu()
