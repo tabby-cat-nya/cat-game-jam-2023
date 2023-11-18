@@ -39,3 +39,4 @@ func _on_area_2d_body_entered(body): #killwall collsions
 func _on_button_pressed():
 	get_tree().reload_current_scene()
 	Engine.time_scale = 1
+	
