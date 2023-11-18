@@ -39,8 +39,10 @@ func gameOver():
 	resetButton.visible = true
 
 func _on_button_pressed():
-	get_tree().reload_current_scene()
+	#get_tree().reload_current_scene()
 	Engine.time_scale = 1
+	GlobalManager.startGame()
+	
 	
 
 
