@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://rtnlglmayj8v"]
+[gd_scene load_steps=37 format=3 uid="uid://rtnlglmayj8v"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dq10v"]
 [ext_resource type="Script" path="res://scripts/gameManager.gd" id="1_rgakh"]
@@ -14,6 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://chi0qap0btiei" path="res://parts/generatorModules/test3.tscn" id="9_7iwfs"]
 [ext_resource type="PackedScene" uid="uid://ckqdoc7ar6fus" path="res://parts/generatorModules/test4.tscn" id="10_nmc5i"]
 [ext_resource type="PackedScene" uid="uid://su0idfbl2jb7" path="res://parts/generatorModules/test5.tscn" id="11_qycva"]
+[ext_resource type="PackedScene" uid="uid://clsg84mk1nb00" path="res://parts/generatorModules/test6.tscn" id="14_fft37"]
+[ext_resource type="PackedScene" uid="uid://s3qp1k1kehce" path="res://parts/generatorModules/test7.tscn" id="15_cm8wi"]
+[ext_resource type="PackedScene" uid="uid://cmj72aag1afvv" path="res://parts/generatorModules/test9.tscn" id="16_no5bs"]
+[ext_resource type="PackedScene" uid="uid://1kh4ce4qqw4e" path="res://parts/startingModule.tscn" id="17_1c407"]
 
 [sub_resource type="Gradient" id="Gradient_rli2b"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -98,6 +102,9 @@ gradient = SubResource("Gradient_i8fno")
 width = 329
 height = 32
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atp6b"]
+size = Vector2(919, 691.156)
+
 [sub_resource type="LabelSettings" id="LabelSettings_xdeh7"]
 font_size = 25
 
@@ -120,7 +127,7 @@ MAX_LENGTH = 100
 targetBody = NodePath("../player")
 
 [node name="player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("camera")]
-position = Vector2(-94, 272)
+position = Vector2(393, 240)
 scale = Vector2(2, 2)
 script = ExtResource("1_dq10v")
 speed = 150.0
@@ -142,6 +149,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(0, 1376256, 7, 65535, 1376256, 7, 1, 1376256, 7, 65531, 1376256, 7, 65532, 1376256, 7, 65533, 1376256, 7, 65534, 1376256, 7, 2, 1376256, 7, 3, 1376256, 7, 4, 1376256, 7, 5, 1376256, 7, 6, 1376256, 7, 7, 1376256, 7, 131067, 1376256, 7, 131068, 1376256, 7, 131069, 1376256, 7, 131070, 1376256, 7, 131071, 1376256, 7, 65536, 1376256, 7, 65537, 1376256, 7, 65538, 1376256, 7, 65539, 1376256, 7, 65540, 1376256, 7, 65541, 1376256, 7, 65542, 1376256, 7, 65543, 1376256, 7, 131077, 1376256, 7, 131076, 1376256, 7, 131075, 1376256, 7, 131074, 1376256, 7, 131073, 1376256, 7, 131072, 1376256, 7, 196607, 1376256, 7, 196606, 1376256, 7, 196605, 1376256, 7, 196604, 1376256, 7, 196603, 1376256, 7, 131078, 1376256, 7, 131079, 1376256, 7, 65544, 1835008, 7, 65545, 1835008, 7, 131081, 1835008, 7, 131080, 1835008, 7, 10, 1376256, 7, 65546, 1376256, 7, 131082, 1376256, 7, 131083, 1376256, 7, 65547, 1376256, 7, 11, 1376256, 7, 12, 1376256, 7, 13, 1376256, 7, 14, 1376256, 7, 15, 1376256, 7, 16, 1376256, 7, 65552, 1376256, 7, 131088, 1376256, 7, 131087, 1376256, 7, 131086, 1376256, 7, 131085, 1376256, 7, 65549, 1376256, 7, 65550, 1376256, 7, 65551, 1376256, 7, 65548, 1376256, 7, 131084, 1376256, 7, 17, 1376256, 7, 65553, 1376256, 7, 65554, 1376256, 7, 131090, 1376256, 7, 131089, 1376256, 7, 18, 1376256, 7, -65517, 1376256, 7, -65516, 1376256, 7, 20, 1376256, 7, 19, 1376256, 7, 65555, 1376256, 7, 65556, 1376256, 7, 131092, 1376256, 7, 131091, 1376256, 7, -131051, 1376256, 7, -131050, 1376256, 7, -65514, 1376256, 7, -65515, 1376256, 7, 21, 1376256, 7, 65557, 1376256, 7, 65558, 1376256, 7, 22, 1376256, 7, 23, 1376256, 7, -65513, 1376256, 7, -131049, 1376256, 7, -196585, 1376256, 7, -196584, 1376256, 7, -131048, 1376256, 7, -65512, 1376256, 7, 24, 1376256, 7, -196583, 1376256, 7, -196582, 1376256, 7, -196581, 1376256, 7, -196580, 1376256, 7, -196579, 1376256, 7, -131043, 1376256, 7, -65507, 1376256, 7, -65508, 1376256, 7, 28, 1376256, 7, 27, 1376256, 7, 26, 1376256, 7, 25, 1376256, 7, -65511, 1376256, 7, -131047, 1376256, 7, -131046, 1376256, 7, -131045, 1376256, 7, -131044, 1376256, 7, -65509, 1376256, 7, -65510, 1376256, 7, 29, 1376256, 7, 30, 1376256, 7, 31, 1376256, 7, 32, 1376256, 7, 33, 1376256, 7, 34, 1376256, 7, 35, 1376256, 7, 36, 1376256, 7, 37, 1376256, 7, 38, 1376256, 7, -65498, 1376256, 7, -131034, 1376256, 7, -196570, 1376256, 7, -196571, 1376256, 7, -196574, 1376256, 7, -196575, 1376256, 7, -196576, 1376256, 7, -196577, 1376256, 7, -196578, 1376256, 7, -131042, 1376256, 7, -131041, 1376256, 7, -131040, 1376256, 7, -131039, 1376256, 7, -131038, 1376256, 7, -131035, 1376256, 7, -65499, 1376256, 7, -65500, 1376256, 7, -65501, 1376256, 7, -65502, 1376256, 7, -65503, 1376256, 7, -65504, 1376256, 7, -65505, 1376256, 7, -65506, 1376256, 7, -262107, 1376256, 7, -327643, 1376256, 7, -393179, 1376256, 7, -458715, 1376256, 7, -458714, 1376256, 7, -393178, 1376256, 7, -327642, 1376256, 7, -262106, 1376256, 7, -65536, 1376256, 7, -131070, 1376256, 7, -196606, 1376256, 7, -262142, 1376256, 7, -327678, 1376256, 7, -393214, 1376256, 7, -393215, 1376256, 7, -393216, 1376256, 7, -327681, 1376256, 7, -327682, 1376256, 7, -327683, 1376256, 7, -327684, 1376256, 7, -262148, 1376256, 7, -196612, 1376256, 7, -131076, 1376256, 7, -65540, 1376256, 7, -4, 1376256, 7, -458713, 1376256, 7, -458712, 1376256, 7, -458711, 1376256, 7, -524247, 1376256, 7, -524246, 1376256, 7, -524245, 1376256, 7, -524244, 1376256, 7, -458708, 1376256, 7, -458710, 1376256, 7, -458709, 1376256, 7, -458707, 1376256, 7, -458706, 1376256, 7, -458705, 1376256, 7, -458704, 1376256, 7, -458703, 1376256, 7, -458702, 1376256, 7, -458701, 1376256, 7, -458700, 1376256, 7, -458699, 1376256, 7, -458697, 1376256, 7, -458696, 1376256, 7, -458695, 1376256, 7, -458694, 1376256, 7, -458693, 1376256, 7, -458692, 1376256, 7, -458691, 1376256, 7, -458688, 1376256, 7, -458687, 1376256, 7, -458686, 1376256, 7, -458689, 1376256, 7, -458682, 1376256, 7, -524218, 1376256, 7, -589754, 1376256, 7, -655290, 1376256, 7, -655289, 1376256, 7, -589753, 1376256, 7, -524217, 1376256, 7, -458681, 1376256, 7, -655267, 1376256, 7, -720803, 1376256, 7, -786339, 1376256, 7, -786338, 1376256, 7, -786337, 1376256, 7, -786336, 1376256, 7, -720799, 1376256, 7, -720800, 1376256, 7, -655263, 1376256, 7, -655262, 1376256, 7, -589726, 1376256, 7, -589725, 1376256, 7, -524189, 1376256, 7, -524188, 1376256, 7, -458652, 1376256, 7, -458651, 1376256, 7, -393115, 1376256, 7, -393114, 1376256, 7, -327578, 1376256, 7, -327577, 1376256, 7, -262041, 1376256, 7, -262040, 1376256, 7, -196504, 1376256, 7, -196503, 1376256, 7, -130967, 1376256, 7, -130966, 1376256, 7, -65430, 1376256, 7, -65429, 1376256, 7, 107, 1376256, 7, 108, 1376256, 7, 65644, 1376256, 7, 65645, 1376256, 7, 131181, 1376256, 7, 131182, 1376256, 7, 196718, 1376256, 7, 196719, 1376256, 7, 262255, 1376256, 7, 262256, 1376256, 7, 327792, 1376256, 7, 327793, 1376256, 7, 393329, 1376256, 7, 393330, 1376256, 7, 393331, 1376256, 7, 393332, 1376256, 7, 393333, 1376256, 7, 393334, 1376256, 7, 393335, 1376256, 7, 393336, 1376256, 7, -458685, 1376256, 7, -524220, 1376256, 7, -458684, 1376256, 7, -589755, 1376256, 7, -524219, 1376256, 7, -458683, 1376256, 7, -720825, 1376256, 7)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(391, 238)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 
@@ -171,9 +179,13 @@ texture = SubResource("GradientTexture2D_qu7yt")
 
 [node name="ModuleManager" type="Node" parent="."]
 script = ExtResource("7_0q47c")
-modules = Array[PackedScene]([ExtResource("8_0hbyy"), ExtResource("7_1cj6f"), ExtResource("8_nkye1"), ExtResource("9_7iwfs"), ExtResource("10_nmc5i"), ExtResource("11_qycva")])
+modules = Array[PackedScene]([ExtResource("8_0hbyy"), ExtResource("7_1cj6f"), ExtResource("8_nkye1"), ExtResource("9_7iwfs"), ExtResource("10_nmc5i"), ExtResource("11_qycva"), ExtResource("14_fft37"), ExtResource("15_cm8wi"), ExtResource("16_no5bs")])
 
 [node name="module" parent="ModuleManager" instance=ExtResource("8_0hbyy")]
+visible = false
+position = Vector2(-113, 290)
+
+[node name="module2" parent="ModuleManager" instance=ExtResource("17_1c407")]
 position = Vector2(-113, 290)
 
 [node name="killWall" type="Node2D" parent="."]
@@ -205,6 +217,12 @@ scale_amount_min = 7.95
 scale_amount_max = 9.15
 color = Color(0, 0.615686, 0.898039, 1)
 
+[node name="Area2D" type="Area2D" parent="killWall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killWall/Area2D"]
+position = Vector2(-1297.5, 0)
+shape = SubResource("RectangleShape2D_atp6b")
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="HUD"]
@@ -215,6 +233,18 @@ Wall Speed: 130
 Modules Generated: 12"
 label_settings = SubResource("LabelSettings_xdeh7")
 
+[node name="Button" type="Button" parent="HUD"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Reset"
+
 [connection signal="moduleGenerated" from="ModuleManager" to="." method="_on_module_manager_module_generated"]
 [connection signal="screen_entered" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="killWall/VisibleOnScreenNotifier2D" to="killWall" method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_entered" from="killWall/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="HUD/Button" to="." method="_on_button_pressed"]
