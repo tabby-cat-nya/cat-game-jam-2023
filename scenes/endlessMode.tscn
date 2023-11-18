@@ -150,6 +150,7 @@ targetBody = NodePath("../player")
 [node name="player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("camera")]
 position = Vector2(393, 240)
 scale = Vector2(2, 2)
+collision_priority = 10.0
 script = ExtResource("1_dq10v")
 speed = 150.0
 jumpVelocity = -300.0
