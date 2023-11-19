@@ -4,6 +4,8 @@ extends Node2D
 @export var currentSpeed : float
 @onready var notifier := $VisibleOnScreenNotifier2D
 @onready var camera := $"../Camera2D"
+var gaming = true
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,10 +15,12 @@ func _ready():
 		currentSpeed = 2*Speed
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x += currentSpeed * delta
-	position.y = camera.position.y
+	if (gaming):
+		position.x += currentSpeed * delta
+		position.y = camera.position.y
 	pass
 
 
