@@ -1,4 +1,5 @@
 extends Node2D
+class_name gameManager
 
 @export var gameTime : float = 0
 var modulesGenerated : int = 0

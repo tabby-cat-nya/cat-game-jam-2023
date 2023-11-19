@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmj72aag1afvv"]
+[gd_scene load_steps=9 format=3 uid="uid://cmj72aag1afvv"]
 
 [ext_resource type="Script" path="res://scripts/module.gd" id="1_2sn40"]
 [ext_resource type="TileSet" uid="uid://bi2gbtu8fw1ts" path="res://dcssfTILEMAP.tres" id="2_ivylp"]
 [ext_resource type="PackedScene" uid="uid://c5s1ovvq4ohpx" path="res://parts/block_on_rail.tscn" id="3_tunhw"]
 [ext_resource type="Texture2D" uid="uid://baxgcpt6v03ey" path="res://3wideBlock.png" id="4_trtd5"]
+[ext_resource type="PackedScene" uid="uid://cun8lq8th8san" path="res://parts/kill_zone.tscn" id="5_j7y6u"]
 
 [sub_resource type="Curve2D" id="Curve2D_liv2o"]
 _data = {
@@ -13,6 +14,9 @@ point_count = 4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bnc3w"]
 size = Vector2(60, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrltb"]
+size = Vector2(603, 47)
 
 [node name="module" type="Node2D"]
 script = ExtResource("1_2sn40")
@@ -38,6 +42,14 @@ shape = SubResource("RectangleShape2D_bnc3w")
 [node name="Sprite2D" parent="block on rail/platform/CollisionShape2D" index="1"]
 texture = ExtResource("4_trtd5")
 
+[node name="killZone" parent="." instance=ExtResource("5_j7y6u")]
+position = Vector2(291, 327)
+
+[node name="CollisionShape2D" parent="killZone" index="0"]
+position = Vector2(123.5, -8.5)
+shape = SubResource("RectangleShape2D_vrltb")
+
 [connection signal="screen_entered" from="connector/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 
 [editable path="block on rail"]
+[editable path="killZone"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://y0wutm7nwaou"]
+[gd_scene load_steps=9 format=3 uid="uid://y0wutm7nwaou"]
 
 [ext_resource type="Script" path="res://scripts/module.gd" id="1_wwbrp"]
 [ext_resource type="TileSet" uid="uid://bi2gbtu8fw1ts" path="res://dcssfTILEMAP.tres" id="2_taxeq"]
 [ext_resource type="PackedScene" uid="uid://c5s1ovvq4ohpx" path="res://parts/block_on_rail.tscn" id="3_oi0j3"]
+[ext_resource type="PackedScene" uid="uid://cun8lq8th8san" path="res://parts/kill_zone.tscn" id="4_27uhf"]
 
 [sub_resource type="Curve2D" id="Curve2D_e7yt4"]
 _data = {
@@ -98,6 +99,9 @@ rotation = -1.5708
 [node name="CollisionShape2D" parent="Node2D/block on rail5/platform/CollisionShape2D/Area2D" index="0"]
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_junl6")
+
+[node name="killZone" parent="." instance=ExtResource("4_27uhf")]
+position = Vector2(288, 391)
 
 [connection signal="screen_entered" from="connector/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 

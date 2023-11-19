@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://rtnlglmayj8v"]
+[gd_scene load_steps=60 format=3 uid="uid://rtnlglmayj8v"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dq10v"]
 [ext_resource type="Script" path="res://scripts/gameManager.gd" id="1_rgakh"]
@@ -18,16 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c7vc2wxgwn1ac" path="res://colorTrails/purple.png" id="12_3h30a"]
 [ext_resource type="Texture2D" uid="uid://76id05ayvybw" path="res://colorTrails/magenta.png" id="13_3a5ru"]
 [ext_resource type="Texture2D" uid="uid://b68s65jmcji0j" path="res://colorTrails/white.png" id="14_46jwn"]
-[ext_resource type="Texture2D" uid="uid://s4nvvqtj6b2m" path="res://menuFlags/menuTrans.bmp" id="15_ykq03"]
-[ext_resource type="Texture2D" uid="uid://2y3vpmtiswlv" path="res://menuFlags/menuNB.bmp" id="16_qwawq"]
 [ext_resource type="PackedScene" uid="uid://1kh4ce4qqw4e" path="res://parts/startingModule.tscn" id="17_1c407"]
-[ext_resource type="Texture2D" uid="uid://dnhhk8o6hsjcc" path="res://flags/flipRainbow.bmp" id="17_27m2f"]
-[ext_resource type="Texture2D" uid="uid://hp81k82c7yl2" path="res://flags/flipLesbian.bmp" id="18_s26ir"]
-[ext_resource type="Texture2D" uid="uid://braphi4ri2j6h" path="res://flags/flipGay.bmp" id="19_hj5ll"]
-[ext_resource type="Texture2D" uid="uid://lejts821c12m" path="res://menuFlags/menuAro.bmp" id="20_yj1i2"]
-[ext_resource type="Texture2D" uid="uid://c6xdk2x7kkrb7" path="res://menuFlags/menuAce.bmp" id="21_xdjr2"]
-[ext_resource type="Texture2D" uid="uid://b8ljgbnrccu6r" path="res://menuFlags/menuPan.bmp" id="22_lxcrj"]
-[ext_resource type="Texture2D" uid="uid://dvxq30ivmcc3j" path="res://menuFlags/menuBi.bmp" id="23_13odu"]
 [ext_resource type="PackedScene" uid="uid://dqyfuov3ku0j8" path="res://parts/generatorModules/tallBlockInTheWay.tscn" id="28_vm013"]
 [ext_resource type="PackedScene" uid="uid://bv13uqp0mlwvd" path="res://parts/generatorModules/simpleValley.tscn" id="28_w1qor"]
 [ext_resource type="PackedScene" uid="uid://c1c1g5brlmyrf" path="res://parts/generatorModules/moveBridge.tscn" id="29_io504"]
@@ -43,6 +34,36 @@
 
 [sub_resource type="Gradient" id="Gradient_rli2b"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_43sc2"]
+load_path = "res://.godot/imported/menuTrans.bmp-1f6f24520730ddddb7c665575d5ce9d6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nctqx"]
+load_path = "res://.godot/imported/flipNB.bmp-b6498aa7f73080211c5e2491d554ef37.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qkxn8"]
+load_path = "res://.godot/imported/flipRainbow.bmp-7b0b35a3c8778b61b31a25f8e9120536.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mrxlm"]
+load_path = "res://.godot/imported/flipLesbian.bmp-34a614b73a939dc37c9fa4bc1cd9a97f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jjbm8"]
+load_path = "res://.godot/imported/flipGay.bmp-396293fdd57207a6547442e1ed6a34f6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rdylc"]
+load_path = "res://.godot/imported/flipAroAce.bmp-efe68ca8e006e421078601204069a961.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b3v45"]
+load_path = "res://.godot/imported/flipAro.bmp-68110912eb7625f8d5579d5f99b8fa17.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1dsvg"]
+load_path = "res://.godot/imported/flipAce.bmp-0b43c8ef9b65d841e7cd3506ad668675.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_06vfa"]
+load_path = "res://.godot/imported/flipPan.bmp-d5c242ee066df2a8ed0517b95eb63b3e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q55f4"]
+load_path = "res://.godot/imported/flipBi.bmp-7937b0cc7eadaf10da6a03d0e238169f.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsi8o"]
 atlas = ExtResource("2_afa5l")
@@ -158,7 +179,7 @@ script = ExtResource("1_dq10v")
 speed = 150.0
 jumpVelocity = -300.0
 camera = NodePath("../Camera2D")
-trailTextures = Array[CompressedTexture2D]([ExtResource("5_qaotk"), ExtResource("6_wo42e"), ExtResource("7_ah3cg"), ExtResource("8_p47o3"), ExtResource("9_v6y42"), ExtResource("10_pxddg"), ExtResource("11_hsk1p"), ExtResource("12_3h30a"), ExtResource("13_3a5ru"), ExtResource("14_46jwn"), ExtResource("15_ykq03"), ExtResource("16_qwawq"), ExtResource("17_27m2f"), ExtResource("18_s26ir"), ExtResource("19_hj5ll"), ExtResource("2_ij3mi"), ExtResource("20_yj1i2"), ExtResource("21_xdjr2"), ExtResource("22_lxcrj"), ExtResource("23_13odu")])
+trailTextures = Array[CompressedTexture2D]([ExtResource("5_qaotk"), ExtResource("6_wo42e"), ExtResource("7_ah3cg"), ExtResource("8_p47o3"), ExtResource("9_v6y42"), ExtResource("10_pxddg"), ExtResource("11_hsk1p"), ExtResource("12_3h30a"), ExtResource("13_3a5ru"), ExtResource("14_46jwn"), SubResource("CompressedTexture2D_43sc2"), SubResource("CompressedTexture2D_nctqx"), SubResource("CompressedTexture2D_qkxn8"), SubResource("CompressedTexture2D_mrxlm"), SubResource("CompressedTexture2D_jjbm8"), SubResource("CompressedTexture2D_rdylc"), SubResource("CompressedTexture2D_b3v45"), SubResource("CompressedTexture2D_1dsvg"), SubResource("CompressedTexture2D_06vfa"), SubResource("CompressedTexture2D_q55f4")])
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="player"]
 sprite_frames = SubResource("SpriteFrames_10y0c")

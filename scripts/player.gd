@@ -38,8 +38,8 @@ func _physics_process(delta):
 	move_and_slide()
 	camera.position = position
 	
-	if (position.y > 10000): #TODO add actual killwalls
-		$"..".gameOver()
+	#if (position.y > 10000): #TODO add actual killwalls
+	#	$"..".gameOver()
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

@@ -20,3 +20,6 @@ func _on_visible_on_screen_notifier_2d_screen_entered():
 	if (!activated):
 		manager.GenerateNextModule(connector.global_position)
 		activated = true
+
+
+

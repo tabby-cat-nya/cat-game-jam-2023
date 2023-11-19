@@ -58,3 +58,6 @@ func _deferred_goto_scene(path):
 	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	get_tree().set_current_scene(current_scene)
 
+func callGameOver():
+	var gamemManager = get_tree().get_root().get_node("level") as gameManager 
+	gamemManager.gameOver()
