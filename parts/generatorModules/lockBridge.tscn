@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=3 uid="uid://y0wutm7nwaou"]
+
+[ext_resource type="Script" path="res://scripts/module.gd" id="1_wwbrp"]
+[ext_resource type="TileSet" uid="uid://bi2gbtu8fw1ts" path="res://dcssfTILEMAP.tres" id="2_taxeq"]
+[ext_resource type="PackedScene" uid="uid://c5s1ovvq4ohpx" path="res://parts/block_on_rail.tscn" id="3_oi0j3"]
+
+[sub_resource type="Curve2D" id="Curve2D_e7yt4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_junl6"]
+
+[sub_resource type="Curve2D" id="Curve2D_lngqh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -100)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_xjdlc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -224)
+}
+point_count = 2
+
+[node name="module" type="Node2D"]
+script = ExtResource("1_wwbrp")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(32, 0)
+scale = Vector2(2, 2)
+tile_set = ExtResource("2_taxeq")
+format = 2
+layer_0/tile_data = PackedInt32Array(458752, 458753, 1, 524288, 458753, 1, 589824, 458753, 1, 655360, 458753, 1, 720896, 458753, 1, 786432, 458753, 1, 851968, 458753, 1, 917504, 458753, 1, 983040, 458753, 1, 458753, 524289, 1, 524289, 524289, 1, 589825, 524289, 1, 655361, 524289, 1, 720897, 524289, 1, 786433, 524289, 1, 851969, 524289, 1, 917505, 524289, 1, 983041, 524289, 1, 327680, 458753, 1, 327681, 524289, 1, 393216, 458753, 1, 393217, 524289, 1, 1048576, 458753, 1, 1114112, 458753, 1, 1179648, 458753, 1, 1245184, 458753, 1, 1310720, 458753, 1, 1376256, 458753, 1, 1441792, 458753, 1, 1048577, 524289, 1, 1114113, 524289, 1, 1179649, 524289, 1, 1245185, 524289, 1, 1310721, 524289, 1, 1376257, 524289, 1, 1441793, 524289, 1, 0, 458753, 0, 1, 524289, 0, 14, 393217, 0, 65536, 458753, 1, 131072, 458753, 1, 196608, 458753, 1, 262144, 458753, 1, 65537, 524289, 1, 131073, 524289, 1, 196609, 524289, 1, 262145, 524289, 1, 65550, 393217, 1, 131086, 393217, 1, 196622, 393217, 1, 262158, 393217, 1, 327694, 393217, 1, 393230, 393217, 1, 458766, 393217, 1, 524302, 393217, 1, 589838, 393217, 1, 655374, 393217, 1, 720910, 393217, 1, 786446, 393217, 1, 851982, 393217, 1, 917518, 393217, 1, 983054, 393217, 1, 1048590, 393217, 1, 1114126, 393217, 1, 1179662, 393217, 1, 1245198, 393217, 1, 1310734, 393217, 1, 1376270, 393217, 1, 1441806, 393217, 1, 15, 458753, 0, 65551, 458753, 1, 131087, 458753, 1, 196623, 458753, 1, 262159, 458753, 1, 327695, 458753, 1, 393231, 458753, 1, 458767, 458753, 1, 524303, 458753, 1, 589839, 458753, 1, 655375, 458753, 1, 720911, 458753, 1, 786447, 458753, 1, 851983, 458753, 1, 917519, 458753, 1, 983055, 458753, 1, 1048591, 458753, 1, 1114127, 458753, 1, 1179663, 458753, 1, 1245199, 458753, 1, 1310735, 458753, 1, 1376271, 458753, 1, 1441807, 458753, 1, 65535, 458753, 0, 131071, 458753, 1, 196607, 458753, 1, 262143, 458753, 1, 327679, 458753, 1, 393215, 458753, 1, 458751, 458753, 1, 524287, 458753, 1, 589823, 458753, 1, 655359, 458753, 1, 720895, 458753, 1, 786431, 458753, 1, 851967, 458753, 1, 917503, 458753, 1, 983039, 458753, 1, 1048575, 458753, 1, 1114111, 458753, 1, 1179647, 458753, 1, 1245183, 458753, 1, 1310719, 458753, 1, 1376255, 458753, 1, 1441791, 458753, 1, 1507327, 458753, 1, -393201, 524289, 0, -393202, 393217, 0, -327665, 524289, 2, -327666, 393217, 2)
+
+[node name="connector" type="Node2D" parent="."]
+position = Vector2(544, 0)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="connector"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(32, 0)
+
+[node name="block on rail" parent="Node2D" instance=ExtResource("3_oi0j3")]
+position = Vector2(96, -32)
+curve = SubResource("Curve2D_e7yt4")
+
+[node name="CollisionShape2D" parent="Node2D/block on rail/platform/CollisionShape2D/Area2D" index="0"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_junl6")
+
+[node name="block on rail2" parent="Node2D" instance=ExtResource("3_oi0j3")]
+position = Vector2(224, -32)
+curve = SubResource("Curve2D_e7yt4")
+
+[node name="CollisionShape2D" parent="Node2D/block on rail2/platform/CollisionShape2D/Area2D" index="0"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_junl6")
+
+[node name="block on rail3" parent="Node2D" instance=ExtResource("3_oi0j3")]
+position = Vector2(352, -32)
+curve = SubResource("Curve2D_e7yt4")
+
+[node name="CollisionShape2D" parent="Node2D/block on rail3/platform/CollisionShape2D/Area2D" index="0"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_junl6")
+
+[node name="block on rail4" parent="Node2D" instance=ExtResource("3_oi0j3")]
+position = Vector2(160, 64)
+curve = SubResource("Curve2D_lngqh")
+
+[node name="PathFollow2D" parent="Node2D/block on rail4" index="1"]
+rotation = -1.5708
+
+[node name="CollisionShape2D" parent="Node2D/block on rail4/platform/CollisionShape2D/Area2D" index="0"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_junl6")
+
+[node name="block on rail6" parent="Node2D" instance=ExtResource("3_oi0j3")]
+position = Vector2(416, 64)
+curve = SubResource("Curve2D_xjdlc")
+
+[node name="PathFollow2D" parent="Node2D/block on rail6" index="1"]
+rotation = -1.5708
+
+[node name="CollisionShape2D" parent="Node2D/block on rail6/platform/CollisionShape2D/Area2D" index="0"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_junl6")
+
+[node name="block on rail5" parent="Node2D" instance=ExtResource("3_oi0j3")]
+position = Vector2(288, 64)
+curve = SubResource("Curve2D_lngqh")
+
+[node name="PathFollow2D" parent="Node2D/block on rail5" index="1"]
+rotation = -1.5708
+
+[node name="CollisionShape2D" parent="Node2D/block on rail5/platform/CollisionShape2D/Area2D" index="0"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_junl6")
+
+[connection signal="screen_entered" from="connector/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+
+[editable path="Node2D/block on rail"]
+[editable path="Node2D/block on rail2"]
+[editable path="Node2D/block on rail3"]
+[editable path="Node2D/block on rail4"]
+[editable path="Node2D/block on rail6"]
+[editable path="Node2D/block on rail5"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c5s1ovvq4ohpx"]
 
 [ext_resource type="Script" path="res://scripts/platform.gd" id="1_5f2k3"]
-[ext_resource type="Texture2D" uid="uid://cuca7yo8x8sr" path="res://dasdsa.png" id="2_e6k4q"]
+[ext_resource type="Texture2D" uid="uid://cuca7yo8x8sr" path="res://block.png" id="2_82ys7"]
 
 [sub_resource type="Curve2D" id="Curve2D_2cn70"]
 _data = {
@@ -52,7 +52,7 @@ shape = SubResource("CircleShape2D_ohelh")
 
 [node name="Sprite2D" type="Sprite2D" parent="platform/CollisionShape2D"]
 scale = Vector2(0.625, 0.625)
-texture = ExtResource("2_e6k4q")
+texture = ExtResource("2_82ys7")
 
 [connection signal="mouse_entered" from="platform/CollisionShape2D/Area2D" to="platform" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="platform/CollisionShape2D/Area2D" to="platform" method="_on_area_2d_mouse_exited"]
