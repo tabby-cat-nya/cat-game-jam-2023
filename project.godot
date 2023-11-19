@@ -27,6 +27,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="CatGameJam"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/tomho/3D Objects/GodotProjects/Exports/CatDash/video.avi"
+
 [input]
 
 moveForward={
