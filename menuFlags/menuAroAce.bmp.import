@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8ljgbnrccu6r"
-path="res://.godot/imported/25ucbi6f.bmp-ff41c682f57c6c9d997e1107c33a47f6.ctex"
+uid="uid://clijqtse4b4f3"
+path="res://.godot/imported/menuAroAce.bmp-88878d98e535d1b76a5c3d55d370d33d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menuFlags/25ucbi6f.bmp"
-dest_files=["res://.godot/imported/25ucbi6f.bmp-ff41c682f57c6c9d997e1107c33a47f6.ctex"]
+source_file="res://menuFlags/menuAroAce.bmp"
+dest_files=["res://.godot/imported/menuAroAce.bmp-88878d98e535d1b76a5c3d55d370d33d.ctex"]
 
 [params]
 

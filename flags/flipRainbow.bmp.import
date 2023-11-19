@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6xdk2x7kkrb7"
-path="res://.godot/imported/cnv22khd.bmp-097acb752a8c7531fa977b7d1f34e198.ctex"
+uid="uid://dnhhk8o6hsjcc"
+path="res://.godot/imported/flipRainbow.bmp-7b0b35a3c8778b61b31a25f8e9120536.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menuFlags/cnv22khd.bmp"
-dest_files=["res://.godot/imported/cnv22khd.bmp-097acb752a8c7531fa977b7d1f34e198.ctex"]
+source_file="res://flags/flipRainbow.bmp"
+dest_files=["res://.godot/imported/flipRainbow.bmp-7b0b35a3c8778b61b31a25f8e9120536.ctex"]
 
 [params]
 

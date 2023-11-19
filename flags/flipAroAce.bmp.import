@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bij6mes4tyfh4"
-path="res://.godot/imported/zgegp358.bmp-eeeab4cc4292acdcabd775d4da9c60fe.ctex"
+uid="uid://clijqtse4b4f3"
+path="res://.godot/imported/flipAroAce.bmp-efe68ca8e006e421078601204069a961.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menuFlags/zgegp358.bmp"
-dest_files=["res://.godot/imported/zgegp358.bmp-eeeab4cc4292acdcabd775d4da9c60fe.ctex"]
+source_file="res://flags/flipAroAce.bmp"
+dest_files=["res://.godot/imported/flipAroAce.bmp-efe68ca8e006e421078601204069a961.ctex"]
 
 [params]
 

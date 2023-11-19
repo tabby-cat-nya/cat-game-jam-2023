@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn2gy1j1ajrbl"
-path="res://.godot/imported/dryafkg5.bmp-42011ad6488e8772c141ea649a38ff65.ctex"
+uid="uid://b8ljgbnrccu6r"
+path="res://.godot/imported/flipPan.bmp-d5c242ee066df2a8ed0517b95eb63b3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menuFlags/dryafkg5.bmp"
-dest_files=["res://.godot/imported/dryafkg5.bmp-42011ad6488e8772c141ea649a38ff65.ctex"]
+source_file="res://flags/flipPan.bmp"
+dest_files=["res://.godot/imported/flipPan.bmp-d5c242ee066df2a8ed0517b95eb63b3e.ctex"]
 
 [params]
 

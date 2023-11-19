@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvxq30ivmcc3j"
-path="res://.godot/imported/26lgfj2j.bmp-37d2365c0664cf5e57ffdf012c58880d.ctex"
+uid="uid://cn2gy1j1ajrbl"
+path="res://.godot/imported/menuGay.bmp-747b1caadcc22474ca66a6ab7aa3f55e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menuFlags/26lgfj2j.bmp"
-dest_files=["res://.godot/imported/26lgfj2j.bmp-37d2365c0664cf5e57ffdf012c58880d.ctex"]
+source_file="res://menuFlags/menuGay.bmp"
+dest_files=["res://.godot/imported/menuGay.bmp-747b1caadcc22474ca66a6ab7aa3f55e.ctex"]
 
 [params]
 

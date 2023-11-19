@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2y3vpmtiswlv"
-path="res://.godot/imported/nb.bmp-159f672f5f6b18fc605c58de15468c30.ctex"
+uid="uid://braphi4ri2j6h"
+path="res://.godot/imported/flipGay.bmp-396293fdd57207a6547442e1ed6a34f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menuFlags/nb.bmp"
-dest_files=["res://.godot/imported/nb.bmp-159f672f5f6b18fc605c58de15468c30.ctex"]
+source_file="res://flags/flipGay.bmp"
+dest_files=["res://.godot/imported/flipGay.bmp-396293fdd57207a6547442e1ed6a34f6.ctex"]
 
 [params]
 

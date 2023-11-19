@@ -1,7 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://cqsfdjxvf1e7w"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_hakxt"]
-[ext_resource type="Texture2D" uid="uid://s4nvvqtj6b2m" path="res://flags/lb8die24.bmp" id="1_hhcvk"]
 [ext_resource type="Texture2D" uid="uid://c0okqm6ww0udy" path="res://colorTrails/red.png" id="2_nmphj"]
 [ext_resource type="Texture2D" uid="uid://b82qxfic228m7" path="res://colorTrails/orange.png" id="3_p0xka"]
 [ext_resource type="Texture2D" uid="uid://dggm0jr76qk6f" path="res://colorTrails/yellow.png" id="4_63yje"]
@@ -12,15 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://c7vc2wxgwn1ac" path="res://colorTrails/purple.png" id="9_pjglt"]
 [ext_resource type="Texture2D" uid="uid://76id05ayvybw" path="res://colorTrails/magenta.png" id="10_6c6f4"]
 [ext_resource type="Texture2D" uid="uid://b68s65jmcji0j" path="res://colorTrails/white.png" id="11_417d4"]
-[ext_resource type="Texture2D" uid="uid://2y3vpmtiswlv" path="res://menuFlags/nb.bmp" id="13_qm8fv"]
-[ext_resource type="Texture2D" uid="uid://bij6mes4tyfh4" path="res://menuFlags/zgegp358.bmp" id="14_clnkb"]
-[ext_resource type="Texture2D" uid="uid://bhjvlr8stfqkp" path="res://menuFlags/yxmnp8c2.bmp" id="15_wo7iu"]
-[ext_resource type="Texture2D" uid="uid://cn2gy1j1ajrbl" path="res://menuFlags/dryafkg5.bmp" id="16_dlbm1"]
-[ext_resource type="Texture2D" uid="uid://clijqtse4b4f3" path="res://menuFlags/wqz2exob.bmp" id="17_qy8d2"]
-[ext_resource type="Texture2D" uid="uid://lejts821c12m" path="res://menuFlags/xbrw6kik.bmp" id="18_yj2bh"]
-[ext_resource type="Texture2D" uid="uid://c6xdk2x7kkrb7" path="res://menuFlags/cnv22khd.bmp" id="19_ulade"]
-[ext_resource type="Texture2D" uid="uid://b8ljgbnrccu6r" path="res://menuFlags/25ucbi6f.bmp" id="20_eaqvk"]
-[ext_resource type="Texture2D" uid="uid://dvxq30ivmcc3j" path="res://menuFlags/26lgfj2j.bmp" id="21_j116q"]
+[ext_resource type="Texture2D" uid="uid://s4nvvqtj6b2m" path="res://menuFlags/menuTrans.bmp" id="12_prfn6"]
+[ext_resource type="Texture2D" uid="uid://2y3vpmtiswlv" path="res://menuFlags/menuNB.bmp" id="13_4pgmg"]
+[ext_resource type="Texture2D" uid="uid://bij6mes4tyfh4" path="res://menuFlags/menuRainbow.bmp" id="14_81l6o"]
+[ext_resource type="Texture2D" uid="uid://bhjvlr8stfqkp" path="res://menuFlags/menuLesbian.bmp" id="15_2u0jc"]
+[ext_resource type="Texture2D" uid="uid://cn2gy1j1ajrbl" path="res://menuFlags/menuGay.bmp" id="16_18tvk"]
+[ext_resource type="Texture2D" uid="uid://clijqtse4b4f3" path="res://menuFlags/menuAroAce.bmp" id="17_aedni"]
+[ext_resource type="Texture2D" uid="uid://lejts821c12m" path="res://menuFlags/menuAro.bmp" id="18_s4nda"]
+[ext_resource type="Texture2D" uid="uid://c6xdk2x7kkrb7" path="res://menuFlags/menuAce.bmp" id="19_xghc3"]
+[ext_resource type="Texture2D" uid="uid://b8ljgbnrccu6r" path="res://menuFlags/menuPan.bmp" id="20_5gvop"]
+[ext_resource type="Texture2D" uid="uid://dvxq30ivmcc3j" path="res://menuFlags/menuBi.bmp" id="21_ny5ni"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_elcyx"]
 font_size = 81
@@ -142,25 +142,25 @@ item_8/icon = ExtResource("10_6c6f4")
 item_9/text = "White"
 item_9/icon = ExtResource("11_417d4")
 item_10/text = "Trans"
-item_10/icon = ExtResource("1_hhcvk")
+item_10/icon = ExtResource("12_prfn6")
 item_11/text = "Non-Binary"
-item_11/icon = ExtResource("13_qm8fv")
+item_11/icon = ExtResource("13_4pgmg")
 item_12/text = "Rainbow"
-item_12/icon = ExtResource("14_clnkb")
+item_12/icon = ExtResource("14_81l6o")
 item_13/text = "Lesbian"
-item_13/icon = ExtResource("15_wo7iu")
+item_13/icon = ExtResource("15_2u0jc")
 item_14/text = "Gay"
-item_14/icon = ExtResource("16_dlbm1")
+item_14/icon = ExtResource("16_18tvk")
 item_15/text = "AroAce"
-item_15/icon = ExtResource("17_qy8d2")
+item_15/icon = ExtResource("17_aedni")
 item_16/text = "Aromantic"
-item_16/icon = ExtResource("18_yj2bh")
+item_16/icon = ExtResource("18_s4nda")
 item_17/text = "Asexual"
-item_17/icon = ExtResource("19_ulade")
+item_17/icon = ExtResource("19_xghc3")
 item_18/text = "Pan"
-item_18/icon = ExtResource("20_eaqvk")
+item_18/icon = ExtResource("20_5gvop")
 item_19/text = "Bisexual"
-item_19/icon = ExtResource("21_j116q")
+item_19/icon = ExtResource("21_ny5ni")
 
 [node name="Label2" type="Label" parent="MarginContainer/VSplitContainer/Panel2/VBoxContainer"]
 layout_mode = 2

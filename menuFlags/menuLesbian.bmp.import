@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhjvlr8stfqkp"
-path="res://.godot/imported/yxmnp8c2.bmp-fe0c92dc061e098b3e1ebc6cfbb6af13.ctex"
+path="res://.godot/imported/menuLesbian.bmp-72253e9ca91778aecc31b1f8dbeb1ea1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menuFlags/yxmnp8c2.bmp"
-dest_files=["res://.godot/imported/yxmnp8c2.bmp-fe0c92dc061e098b3e1ebc6cfbb6af13.ctex"]
+source_file="res://menuFlags/menuLesbian.bmp"
+dest_files=["res://.godot/imported/menuLesbian.bmp-72253e9ca91778aecc31b1f8dbeb1ea1.ctex"]
 
 [params]
 

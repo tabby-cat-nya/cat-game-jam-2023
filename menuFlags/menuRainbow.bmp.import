@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s4nvvqtj6b2m"
-path="res://.godot/imported/lb8die24.bmp-df7d92f51b85aa9eba9e8e932fa952a1.ctex"
+uid="uid://bij6mes4tyfh4"
+path="res://.godot/imported/menuRainbow.bmp-0e73f213d42a4044d1efda83589ff8d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://flags/lb8die24.bmp"
-dest_files=["res://.godot/imported/lb8die24.bmp-df7d92f51b85aa9eba9e8e932fa952a1.ctex"]
+source_file="res://menuFlags/menuRainbow.bmp"
+dest_files=["res://.godot/imported/menuRainbow.bmp-0e73f213d42a4044d1efda83589ff8d2.ctex"]
 
 [params]
 

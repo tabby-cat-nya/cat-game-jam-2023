@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnhhk8o6hsjcc"
-path="res://.godot/imported/zgegp358.bmp-461e594f28969421c9f3a93038f8073d.ctex"
+uid="uid://s4nvvqtj6b2m"
+path="res://.godot/imported/flipTrans.bmp-47ee3a5d6ed0506aa5c2aa8352ff1a1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://flags/zgegp358.bmp"
-dest_files=["res://.godot/imported/zgegp358.bmp-461e594f28969421c9f3a93038f8073d.ctex"]
+source_file="res://flags/flipTrans.bmp"
+dest_files=["res://.godot/imported/flipTrans.bmp-47ee3a5d6ed0506aa5c2aa8352ff1a1e.ctex"]
 
 [params]
 
