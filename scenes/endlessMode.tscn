@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dq10v"]
 [ext_resource type="Script" path="res://scripts/gameManager.gd" id="1_rgakh"]
 [ext_resource type="Texture2D" uid="uid://ba2m3q0p3ff50" path="res://Neko.png" id="2_afa5l"]
-[ext_resource type="Texture2D" uid="uid://clijqtse4b4f3" path="res://menuFlags/menuAroAce.bmp" id="2_ij3mi"]
+[ext_resource type="Texture2D" uid="uid://clijqtse4b4f3" path="res://flags/flipAroAce.bmp" id="2_ij3mi"]
 [ext_resource type="Script" path="res://scripts/Trail.gd" id="4_a4cgh"]
 [ext_resource type="Script" path="res://scripts/wallOfDeath.gd" id="4_as1ca"]
 [ext_resource type="Texture2D" uid="uid://c0okqm6ww0udy" path="res://colorTrails/red.png" id="5_qaotk"]
